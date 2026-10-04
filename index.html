@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will Guincho | Guincho 24 horas em Itaquaquecetuba e Região</title>
+  <meta name="description" content="Will Guincho: Atendimento 24 horas para guincho, socorro mecânico e remoção de veículos leves e pesados em Itaquaquecetuba e região. Solicite via WhatsApp!">
+  <meta name="theme-color" content="#05070b">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Will Guincho | Atendimento 24 horas em Itaquaquecetuba">
+  <meta property="og:description" content="Guincho e remoção de veículos 24h. Atendimento rápido e seguro.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="capa.jpg">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0878ff',
+              darkblue: '#0458c9',
+              light: '#2d8cff',
+              dark: '#05070b',
+              darker: '#030509',
+              card: '#0a0e16',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 3s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            glow: {
+              '0%': { boxShadow: '0 0 15px rgba(8, 120, 255, 0.4)' },
+              '100%': { boxShadow: '0 0 30px rgba(8, 120, 255, 0.8)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #05070b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0878ff;
+    }
+
+    .hero-bg {
+      background: linear-gradient(90deg, rgba(3,5,9,.95) 0%, rgba(3,5,9,.8) 50%, rgba(3,5,9,.4) 100%),
+                  linear-gradient(0deg, rgba(5,7,11,0.9), transparent 50%),
+                  url("capa.jpg") center/cover no-repeat;
+    }
+
+    .glass-card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    
+    .glass-card:hover {
+      border-color: rgba(8, 120, 255, 0.3);
+      box-shadow: 0 10px 30px -10px rgba(8, 120, 255, 0.2);
+    }
+  </style>
+</head>
+
+<body class="bg-[#05070b] text-[#e9edf5] antialiased selection:bg-[#0878ff] selection:text-white">
+
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#05070b]/80 backdrop-blur-md border-b border-white/10" id="header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#inicio" class="flex items-center gap-3 group">
+          <div class="relative">
+            <img src="logo.jpeg" alt="Will Guincho Logo" class="w-12 h-12 rounded-full object-cover border-2 border-white/80 group-hover:border-brand-blue transition-colors shadow-lg" onerror="this.src='https://placehold.co/100x100/0878ff/ffffff?text=WG'">
+            <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-[#05070b] rounded-full"></span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-black tracking-tight text-lg text-white group-hover:text-brand-light transition-colors">WILL GUINCHO</span>
+            <span class="text-[10px] tracking-widest text-slate-400 uppercase font-semibold">24 Horas Itaquá</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+          <a href="#inicio" class="hover:text-white transition-colors">Início</a>
+          <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
+          <a href="#sobre" class="hover:text-white transition-colors">Sobre Nós</a>
+          <a href="#calculadora" class="hover:text-white transition-colors">Simular Atendimento</a>
+          <a href="#depoimentos" class="hover:text-white transition-colors">Avaliações</a>
+          <a href="#contato" class="hover:text-white transition-colors">Contato</a>
+        </nav>
+
+        <!-- CTA Header Button -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="https://wa.me/5511924625707?text=Olá%2C%20preciso%20de%20um%20guincho%20urgente!" target="_blank" rel="noopener" 
+             class="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-blue text-white font-bold text-sm shadow-[0_4px_20px_rgba(8,120,255,0.4)] hover:bg-[#1681ff] hover:scale-105 active:scale-95 transition-all duration-200">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            WhatsApp 24h
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden p-2.5 text-slate-300 hover:text-white focus:outline-none" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0a0e16] border-b border-white/10 px-6 py-5 space-y-4 shadow-2xl">
+      <a href="#inicio" class="block text-slate-200 font-medium hover:text-brand-light transition-colors mobile-link">Início</a>
+      <a href="#servicos" class="block text-slate-200 font-medium hover:text-brand-light transition-colors mobile-link">Serviços</a>
+      <a href="#sobre" class="block text-slate-200 font-medium hover:text-brand-light transition-colors mobile-link">Sobre Nós</a>
+      <a href="#calculadora" class="block text-slate-200 font-medium hover:text-brand-light transition-colors mobile-link">Simular Atendimento</a>
+      <a href="#depoimentos" class="block text-slate-200 font-medium hover:text-brand-light transition-colors mobile-link">Avaliações</a>
+      <a href="#contato" class="block text-slate-200 font-medium hover:text-brand-light transition-colors mobile-link">Contato</a>
+      <div class="pt-2">
+        <a href="https://wa.me/5511924625707?text=Olá%2C%20preciso%20de%20um%20guincho%20urgente!" target="_blank" rel="noopener" 
+           class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-brand-blue text-white font-bold text-sm shadow-lg">
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="relative min-h-[90vh] flex items-center pt-24 pb-16 hero-bg overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#05070b] via-transparent to-black/40 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
+        <div class="max-w-3xl">
+          
+          <!-- Live Status Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/40 border border-white/15 backdrop-blur-md mb-8 shadow-xl animate-fade-in">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span class="text-xs font-semibold text-slate-200 tracking-wide uppercase">Plantão 24 Horas em Itaquaquecetuba</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] text-white mb-6">
+            Ficou a pé? Guincho rápido em <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-light to-cyan-400">Itaquá e Região.</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mb-10">
+            Remoção segura, socorro mecânico e transporte de veículos particulares, utilitários e motos com agilidade e preço justo. Atendimento imediato!
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a href="https://wa.me/5511924625707?text=Olá%2C%20preciso%20de%20um%20guincho%20agora%20em%20Itaquaquecetuba!" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-brand-blue hover:bg-[#1681ff] text-white font-extrabold text-base shadow-[0_10px_30px_rgba(8,120,255,0.35)] hover:-translate-y-0.5 transition-all duration-200 group">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              Chamar Guincho no WhatsApp
+            </a>
+
+            <a href="tel:+5511924625707"
+               class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-white font-bold text-base backdrop-blur-md transition-all duration-200">
+              <svg class="w-5 h-5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Ligar: (11) 92462-5707
+            </a>
+          </div>
+
+          <!-- Trust Badges Under Hero -->
+          <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-white/10 text-slate-400 text-xs sm:text-sm font-medium">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Resposta Rápida</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <span>Frota Segura e Equipada</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              <span>Preço Justo</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-[#05070b] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-brand-light font-extrabold uppercase tracking-widest text-xs mb-3 block">NOSSOS SERVIÇOS</span>
+          <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white">Soluções completas para o seu veículo</h2>
+          <p class="text-slate-400 mt-4 text-base sm:text-lg">Equipados para qualquer emergência na estrada, com atendimento ágil em Itaquaquecetuba e municípios vizinhos.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Service Card 1 -->
+          <div class="glass-card p-8 rounded-2xl transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center text-brand-light mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Guincho 24 Horas</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Disponibilidade total dia e noite, finais de semana e feriados para socorro imediato onde você estiver.
+            </p>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="glass-card p-8 rounded-2xl transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center text-brand-light mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Remoção de Veículos</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Transporte seguro de carros de passeio, utilitários leves e motos com total cuidado contra danos e arranhões.
+            </p>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="glass-card p-8 rounded-2xl transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center text-brand-light mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Itaquá e Região</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Base estratégica no Jardim Maragogipe, com atendimento rápido em Itaquaquecetuba, Poá, Suzano, Mogi e rodovias próximas.
+            </p>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="glass-card p-8 rounded-2xl transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center text-brand-light mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Pane Seca e Bateria</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Auxílio rápido para carga de bateria (chupeta) ou suporte imediato caso tenha ficado sem combustível na via.
+            </p>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="glass-card p-8 rounded-2xl transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center text-brand-light mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Transporte de Utilitários</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Caminhão guincho preparado com plataforma hidráulica robusta para carros rebaixados, vans e utilitários leves.
+            </p>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="glass-card p-8 rounded-2xl transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-xl bg-brand-blue/15 border border-brand-blue/30 flex items-center justify-center text-brand-light mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Segurança e Confiança</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Profissional experiente, pontualidade no atendimento e total transparência no valor do serviço prestado.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="calculadora" class="py-24 bg-[#080c13] relative border-y border-white/5">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+          <span class="text-brand-light font-extrabold uppercase tracking-widest text-xs mb-3 block">SIMULADOR RÁPIDO</span>
+          <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white">Precisa de atendimento agora?</h2>
+          <p class="text-slate-400 mt-2 text-sm sm:text-base">Preencha os dados abaixo e clique para enviar diretamente para o WhatsApp do Will Guincho.</p>
+        </div>
+
+        <div class="glass-card p-6 sm:p-10 rounded-3xl shadow-2xl">
+          <form id="quoteForm" onsubmit="sendWhatsAppQuote(event)" class="space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold text-slate-300 mb-2">Seu Nome</label>
+                <input type="text" id="qName" required placeholder="Ex: Carlos Silva" 
+                       class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-blue transition-colors">
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-300 mb-2">Tipo de Veículo</label>
+                <select id="qVehicle" class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white focus:outline-none focus:border-brand-blue transition-colors">
+                  <option value="Carro de Passeio" class="bg-[#05070b]">Carro de Passeio</option>
+                  <option value="SUV / Utilitário" class="bg-[#05070b]">SUV / Utilitário Leve</option>
+                  <option value="Moto" class="bg-[#05070b]">Moto</option>
+                  <option value="Outro" class="bg-[#05070b]">Outro veículo</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-semibold text-slate-300 mb-2">Onde você está (Origem)?</label>
+                <input type="text" id="qOrigin" required placeholder="Ex: Av. Isabella, Centro - Itaquá" 
+                       class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-blue transition-colors">
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-300 mb-2">Para onde vai (Destino/Oficina)?</label>
+                <input type="text" id="qDestination" required placeholder="Ex: Oficina Mecânica / Bairro próximo" 
+                       class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-blue transition-colors">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold text-slate-300 mb-2">Detalhes da Ocorrência (Opcional)</label>
+              <textarea id="qDetails" rows="3" placeholder="Ex: Pane mecânica, pneu furado, colisão leve, etc." 
+                        class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-blue transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-brand-blue hover:bg-[#1681ff] text-white font-extrabold text-base shadow-[0_10px_25px_rgba(8,120,255,0.4)] transition-all duration-200 flex items-center justify-center gap-3">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              Enviar Solicitação para o WhatsApp
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-[#05070b]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <div class="relative group">
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-blue to-cyan-500 opacity-30 blur-lg group-hover:opacity-50 transition duration-500"></div>
+            <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <img src="capa.jpg" alt="Will Guincho Caminhão" class="w-full aspect-square object-cover transform hover:scale-105 transition duration-700" onerror="this.src='https://placehold.co/600x600/0878ff/ffffff?text=Will+Guincho'">
+            </div>
+          </div>
+
+          <div>
+            <span class="text-brand-light font-extrabold uppercase tracking-widest text-xs mb-3 block">SOBRE O WILL GUINCHO</span>
+            <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-6">Referência em socorro e remoção em Itaquaquecetuba</h2>
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+              A Will Guincho é especializada em prestar socorro rápido com total segurança e respeito ao seu patrimônio. Atendemos motoristas em pane mecânica, elétrica ou acidentes, oferecendo tranquilidade na hora que você mais precisa.
+            </p>
+
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-blue flex items-center justify-center text-white text-xs font-black shrink-0 mt-1">✓</div>
+                <span class="text-slate-200 font-medium">Atendimento 24 horas por dia, 7 dias por semana.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-blue flex items-center justify-center text-white text-xs font-black shrink-0 mt-1">✓</div>
+                <span class="text-slate-200 font-medium">Equipe profissional com ampla experiência em guincho e transporte.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-blue flex items-center justify-center text-white text-xs font-black shrink-0 mt-1">✓</div>
+                <span class="text-slate-200 font-medium">Localização estratégica no Jardim Maragogipe, Itaquaquecetuba/SP.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-blue flex items-center justify-center text-white text-xs font-black shrink-0 mt-1">✓</div>
+                <span class="text-slate-200 font-medium">Orçamento transparente e sem surpresas na hora de pagar.</span>
+              </li>
+            </ul>
+
+            <a href="https://wa.me/5511924625707?text=Olá%2C%20gostaria%20de%20tirar%20dúvidas%20sobre%20os%20serviços%20da%20Will%20Guincho." target="_blank" rel="noopener"
+               class="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white font-bold text-sm transition-all duration-200">
+              Falar com o Will agora
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="py-24 bg-[#080c13] border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-brand-light font-extrabold uppercase tracking-widest text-xs mb-3 block">AVALIAÇÕES DE CLIENTES</span>
+          <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white">O que dizem quem já precisou</h2>
+          <p class="text-slate-400 mt-3 text-base">Confiança e rapidez reconhecidas pelos motoristas da região.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Testimonial 1 -->
+          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-400 gap-1 mb-4">
+                ★★★★★
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                "Meu carro quebrou na Ayrton Senna perto de Itaquá à noite. O Will chegou super rápido, foi extremamente cuidadoso ao colocar o carro na plataforma e me levou com segurança até a oficina."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+              <div class="w-10 h-10 rounded-full bg-brand-blue/30 flex items-center justify-center font-bold text-brand-light text-sm">RC</div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Roberto Cardoso</h4>
+                <p class="text-xs text-slate-400">Morador de Itaquaquecetuba</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-400 gap-1 mb-4">
+                ★★★★★
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                "Atendimento nota 10! Liguei de madrugada e fui atendido na hora. Preço honesto e sem abusos como outras empresas costumam fazer em emergências. Recomendo demais!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+              <div class="w-10 h-10 rounded-full bg-brand-blue/30 flex items-center justify-center font-bold text-brand-light text-sm">AP</div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Ana Paula Souza</h4>
+                <p class="text-xs text-slate-400">Motorista de Aplicativo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="glass-card p-8 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-400 gap-1 mb-4">
+                ★★★★★
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                "Profissional pontual, educado e muito ágil. Salvou meu dia quando meu utilitário deu pane elétrica perto do Jardim Maragogipe. Já salvei o contato na agenda!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+              <div class="w-10 h-10 rounded-full bg-brand-blue/30 flex items-center justify-center font-bold text-brand-light text-sm">FM</div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Felipe Martins</h4>
+                <p class="text-xs text-slate-400">Prestador de Serviços</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contato" class="py-24 bg-[#05070b] relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(8,120,255,0.15),transparent_50%)] pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="glass-card p-8 sm:p-14 rounded-3xl text-center border border-white/10 shadow-2xl">
+          
+          <span class="text-brand-light font-extrabold uppercase tracking-widest text-xs mb-3 block">ATENDIMENTO 24 HORAS</span>
+          
+          <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-4">
+            Precisa de guincho agora?
+          </h2>
+
+          <p class="text-slate-300 max-w-xl mx-auto text-base sm:text-lg mb-8">
+            Não fique na mão na estrada. Chame o Will Guincho diretamente pelo WhatsApp ou ligue agora mesmo.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+            <a href="https://wa.me/5511924625707?text=Olá%2C%20preciso%20de%20um%20guincho%20urgente!" target="_blank" rel="noopener"
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-brand-blue hover:bg-[#1681ff] text-white font-extrabold text-base shadow-[0_10px_30px_rgba(8,120,255,0.4)] transition-all duration-200">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              Chamar pelo WhatsApp
+            </a>
+
+            <a href="tel:+5511924625707"
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-white font-extrabold text-base transition-all duration-200">
+              <svg class="w-5 h-5 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              (11) 92462-5707
+            </a>
+          </div>
+
+          <div class="text-slate-400 text-sm font-medium pt-6 border-t border-white/10 flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Rua Presidente Prudente, 72 — Jardim Maragogipe — Itaquaquecetuba/SP</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-[#030509] py-12 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="logo.jpeg" alt="Will Guincho" class="w-8 h-8 rounded-full object-cover border border-white/20" onerror="this.src='https://placehold.co/50x50/0878ff/ffffff?text=WG'">
+        <span class="font-bold text-white tracking-tight">WILL GUINCHO</span>
+        <span class="text-xs text-slate-500">© 2026 Todos os direitos reservados.</span>
+      </div>
+      <div class="text-xs sm:text-sm text-slate-400 font-medium">
+        Atendimento 24h · Itaquaquecetuba e Região
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/5511924625707?text=Olá%2C%20preciso%20de%20um%20guincho%20urgente!" target="_blank" rel="noopener"
+     class="fixed right-5 bottom-5 z-50 w-16 h-16 bg-[#25d366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:scale-110 active:scale-95 transition-all duration-300 animate-bounce"
+     aria-label="Falar com a Will Guincho pelo WhatsApp">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <script>
+    // Toggle mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 30) {
+        header.classList.add('bg-[#05070b]/95', 'shadow-lg');
+      } else {
+        header.classList.remove('bg-[#05070b]/95', 'shadow-lg');
+      }
+    });
+
+    // WhatsApp Quote Generator Function
+    function sendWhatsAppQuote(e) {
+      e.preventDefault();
+      const name = document.getElementById('qName').value;
+      const vehicle = document.getElementById('qVehicle').value;
+      const origin = document.getElementById('qOrigin').value;
+      const destination = document.getElementById('qDestination').value;
+      const details = document.getElementById('qDetails').value;
+
+      let message = `Olá, meu nome é *${name}*.\n`;
+      message += `Preciso de guincho para: *${vehicle}*.\n`;
+      message += `📍 *Origem:* ${origin}\n`;
+      message += `🏁 *Destino:* ${destination}\n`;
+      if (details) {
+        message += `📝 *Detalhes:* ${details}\n`;
+      }
+      message += `Pode me atender?`;
+
+      const encodedMessage = encodeURIComponent(message);
+      window.open(`https://wa.me/5511924625707?text=${encodedMessage}`, '_blank');
+    }
+  </script>
+
+</body>
+</html>
